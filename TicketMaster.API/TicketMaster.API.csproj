@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+    <_FunctionsSkipCleanOutput>true</_FunctionsSkipCleanOutput>
+    <UserSecretsId>2f8713be-bffc-4b6c-9b7c-8274b139a10a</UserSecretsId>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.10" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.9" />
+    <PackageReference Include="MongoDB.Bson" Version="2.11.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  
+</Project>
